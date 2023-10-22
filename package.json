@@ -1,0 +1,25 @@
+{
+  "name": "buntest",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun --watch run index.ts",
+    "dev": "bun run --hot src/index.ts"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.7",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "hono": "^3.8.3",
+    "pg": "^8.11.3",
+    "postgres": "^3.3.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  }
+}
