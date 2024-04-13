@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
-
-function App() {
-  return <div> Okay cool </div>;
-}
+import {
+  RouterProvider,
+} from "react-router-dom";
+import router from "@/ui/router";
 
 document.addEventListener('DOMContentLoaded', function () {
   var evtSource = new EventSource("/watcher");
@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // tslint:disable-next-line:no-unused-expression
 const root = createRoot(document.getElementById('app')!);
-root.render(<App />);
+root.render(<RouterProvider router={router} />);
 
