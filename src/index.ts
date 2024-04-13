@@ -12,7 +12,7 @@ const builds = await Bun.build({
 
 });
 
-const indexFile = Bun.file('index.html');
+const indexFile = Bun.file('public/index.html');
 
 const app = new Hono();
 
