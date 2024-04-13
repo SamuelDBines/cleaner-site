@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { User } from "../models/User";
+import { User } from "../../packages/models/User";
 
 export const UserRouter = new Hono();
 
