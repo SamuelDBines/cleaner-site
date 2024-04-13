@@ -23,6 +23,8 @@ app.get('/main.js', async (c) => {
   return c.body(stream, 200, {
     'Content-Type': builds.outputs[0].type, // Correct MIME type, e.g., 'text/javascript'
   });
+
+
 });
 
 // Serve the index.html file
