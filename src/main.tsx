@@ -6,15 +6,11 @@ function App() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log("DOM loaded");
   var evtSource = new EventSource("/watcher");
-
   evtSource.onerror = function (event) {
     location.reload();
   };
 });
-
-
 
 // tslint:disable-next-line:no-unused-expression
 const root = createRoot(document.getElementById('app')!);
