@@ -1,16 +1,11 @@
 {
   "watch": [
-    "packages/shared",
-    "packages/api"
+    "src"
   ],
-  "ext": "ts",
+  "ext": "ts, tsx",
   "ignore": [
     "node_modules",
-    "dist",
-    "apps/core/dist",
-    "apps/ui/dist",
-    "packages/api/dist",
-    "packages/shared/dist"
+    "dist"
   ],
-  "exec": "npm run apps"
+  "exec": "npm run start"
 }
