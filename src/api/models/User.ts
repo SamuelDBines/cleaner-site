@@ -32,6 +32,7 @@ export class User extends BaseModel implements IUser {
   @Column("jsonb", { nullable: true })
   tenants: IUserOnTenant[] | null;
 
+
   @Column()
   firstName: string;
 
