@@ -1,5 +1,5 @@
 import { Hono } from 'hono';
-import { streamText, streamSSE } from 'hono/streaming';
+import { streamSSE } from 'hono/streaming';
 
 const builds = await Bun.build({
   entrypoints: ['./src/main.tsx'],
@@ -31,19 +31,6 @@ app.get('/', async (c) => {
   const indexContent = await indexFile.text();
   return c.html(indexContent);
 });
-
-// app.get('/subscribe', (c) => {
-//   return streamText(c, async (stream: any) => {
-//     // Write a process to be executed when aborted.
-//     stream.onAbort(() => {
-//       console.log('Aborted!');
-//     });
-//     // Write a Uint8Array.
-//     await stream.write("hey\n\n");
-//     // Pipe a readable stream.
-//     // await stream.pipe(anotherReadableStream);
-//   });
-// });
 
 let id = 0;
 
